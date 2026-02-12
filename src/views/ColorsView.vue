@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <h2 class="title">Quelle est votre humeur ?</h2>
+    <h2 class="title">Quelle est votre couleur préférée ?</h2>
 
     <div class="message-container">
       <transition name="slide-fade" mode="out-in">
         <p v-if="selectedColor" :style="{ color: selectedColor.value }" class="humeur-text">
           {{ getMessage(selectedColor.name) }}
         </p>
-        <p v-else class="instruction">Cliquez sur une couleur pour révéler son énergie...</p>
+        <p v-else class="instruction">Cliquez sur une couleur...</p>
       </transition>
     </div>
 
@@ -27,7 +27,7 @@
     
     <transition name="fade">
       <button v-if="selectedColor" @click="reset" class="reset-fab">
-        <span class="icon">↺</span> Choisir une autre vibration
+        <span class="icon">↺</span> Choisir une autre couleur
       </button>
     </transition>
   </div>
